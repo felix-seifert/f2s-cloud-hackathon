@@ -1,6 +1,6 @@
 # Fiction2Science Hackathon - Cloud Challenge
 
-In this hackthon we created several microservices which we could run on our own machine. They were connected with a router in our network based on the WAMP protocol (web application messaging protocol). The router was running a version of @crossbario 's servers.
+In this hackthon we created several microservices which we could run on our own machine. They were connected with a router in our network based on the WAMP (web application messaging protocol). The router was running a version of @crossbario 's servers.
 
 Our task was creating the idea for a car interior app and starting to develop it. Finding the idea hapened based on a given persona.
 

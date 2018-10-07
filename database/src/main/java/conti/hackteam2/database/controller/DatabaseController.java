@@ -58,6 +58,14 @@ public class DatabaseController {
         }
     }
 
+    /**
+     * Registers the procedure conti.hackteam2.find_all_events to get a list of all events out of the database
+     *
+     * Returns a list of all events
+     *
+     * @param session
+     * @param details
+     */
     private void registerFindAllEvents(Session session, SessionDetails details) {
         CompletableFuture<Registration> registrationCompletableFuture = session.register(
                 "conti.hackteam2.find_all_events", this::findAllEvents);
@@ -71,6 +79,16 @@ public class DatabaseController {
         return response;
     }
 
+    /**
+     * Registers the procedure conti.hackteam2.find_event to find an Event by it ID
+     *
+     * Argument is the ID of the event which should be retrieved
+     *
+     * Returns the event with the given ID
+     *
+     * @param session
+     * @param details
+     */
     private void registerFindEventByID(Session session, SessionDetails details) {
         CompletableFuture<Registration> registrationCompletableFuture = session.register(
                 "conti.hackteam2.find_event", this::findEventByID);
@@ -84,6 +102,18 @@ public class DatabaseController {
         return response;
     }
 
+    /**
+     * Registers the procedure conti.hackteam2.delete_passenger to delete a given passenger and returns the Event
+     * without the deleted passenger
+     *
+     * First argument  is the ID of the Passenger to notify
+     * Second argument is the ID of his/her event
+     *
+     * Returns the related Event without the deleted passenger
+     *
+     * @param session
+     * @param details
+     */
     private void registerDeletePassengerByIDAndEventID(Session session, SessionDetails details) {
         CompletableFuture<Registration> registrationCompletableFuture = session.register(
                 "conti.hackteam2.delete_passenger", this::deletePassengerByIDAndEventID);

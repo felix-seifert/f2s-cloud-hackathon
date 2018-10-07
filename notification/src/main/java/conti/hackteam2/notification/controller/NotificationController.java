@@ -45,6 +45,18 @@ public class NotificationController {
         }
     }
 
+    /**
+     * Registers the procedure conti.hackteam2.notify_passenger
+     *
+     * First argument  is the ID of the Passenger to notify
+     * Second argument is the ID of his/her event
+     *
+     * This remote procedure notifies the given passenger, (notifies him/her,)
+     * deletes him/her out of the database and returns the related Event without the notified passenger
+     *
+     * @param session
+     * @param details
+     */
     private void registerNotifyPassenger(Session session, SessionDetails details) {
         CompletableFuture<Registration> registerNotifyPassengerCompletableFuture= session.register(
                 "conti.hackteam2.notify_passenger", this::notifyPassenger);

@@ -25,7 +25,7 @@ public class TestController {
         session = new Session(executor);
 
         // When the session joins a realm, run the code
-        session.addOnJoinListener(this::testCall);
+        session.addOnJoinListener(this::callNotifyPassenger);
     }
 
     public int start(String url, String realm) {
@@ -44,7 +44,15 @@ public class TestController {
         }
     }
 
-    private void testCall(Session session, SessionDetails details) {
+    /**
+     * Simulates the frontend calling conti.hackteam2.notify_passenger with a given passenger ID and a given event ID
+     *
+     * Prints the result.
+     *
+     * @param session
+     * @param details
+     */
+    private void callNotifyPassenger(Session session, SessionDetails details) {
 
         int passengerID = 11;
         int eventID = 2;

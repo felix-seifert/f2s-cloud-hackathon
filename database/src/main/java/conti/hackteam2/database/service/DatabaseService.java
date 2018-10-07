@@ -47,27 +47,25 @@ public class DatabaseService {
 
     public List<Event> createSampleData() {
 
-        List<Passenger> samplePassengerList = createSamplePassengerList();
-
         Event event1 = new Event(1, "Movie at Regensburg - Ostentor Kino",
                 "Adolf-Schmetzer-Straße 5, 93055 Regensburg", 49.018029, 12.109601,
-                "2018-09-29T09:24:17Z", samplePassengerList);
+                "2018-09-29T09:24:17Z", createSamplePassengerList());
 
         Event event2 = new Event(2, "Museum at Regensburg - Historisches Museum Regensburg",
                 "Dachaupl. 2-4, 93047 Regensburg", 49.017902,12.102091,
-                "2018-09-29T09:24:17Z", samplePassengerList);
+                "2018-09-29T09:24:17Z", createSamplePassengerList());
 
         Event event3 = new Event(3, "Asian dinner at Regensburg - VyVu Vietnam Asia Cuisine",
                 "Prinz-Ludwig-Straße 9, 93055 Regensburg", 49.016378, 12.120169,
-                "2018-09-29T09:24:17Z", samplePassengerList);
+                "2018-09-29T09:24:17Z", createSamplePassengerList());
 
         Event event4 = new Event(4, "Shopping Mall at Regensburg - Regensburg Arcaden",
                 "Friedenstraße 23, 93053 Regensburg", 49.010807, 12.099262,
-                "2018-09-29T09:24:17Z", samplePassengerList);
+                "2018-09-29T09:24:17Z", createSamplePassengerList());
 
         Event event5 = new Event(5, "Coffee shop is near you - BLACK BEAN - The Coffee Company",
                 "Gesandtenstraße 3, 93047 Regensburg", 49.018524, 12.093211,
-                "2018-09-29T09:24:17Z", samplePassengerList);
+                "2018-09-29T09:24:17Z", createSamplePassengerList());
 
         List<Event> eventList = new LinkedList<>();
         eventList.add(event1);

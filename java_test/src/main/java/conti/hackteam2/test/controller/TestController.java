@@ -46,9 +46,12 @@ public class TestController {
 
     private void testCall(Session session, SessionDetails details) {
 
-        CompletableFuture<CallResult> callResultCompletableFuture =
-                session.call("conti.hackteam2.find_all_events");
-        callResultCompletableFuture.whenComplete((callResult, throwable) -> {
+        int passengerID = 11;
+        int eventID = 2;
+
+        CompletableFuture<CallResult> callNotifyPassengerCompletableFuture =
+                session.call("conti.hackteam2.notify_passenger", passengerID, eventID);
+        callNotifyPassengerCompletableFuture.whenComplete((callResult, throwable) -> {
             if (throwable == null) {
                 LOGGER.i("Result: " + callResult.results);
             } else {
